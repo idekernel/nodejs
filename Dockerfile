@@ -11,8 +11,13 @@ MAINTAINER docker_user docker_user@email.com
 
 # Commands to update the image
 #RUN echo "deb http://archive.ubuntu.com/ubuntu/ raring main universe" >> /etc/apt/sources.list
+# nginx
 RUN apt-get update && apt-get install -y nginx
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+
+# nodejs
+RUN apt-get install -y nodejs
+
 
 # Commands when creating a new container
 CMD /usr/sbin/nginx
