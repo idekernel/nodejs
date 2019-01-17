@@ -1,3 +1,2 @@
 # nodejs
-nodejs memcache mysql 
-nodejs koa2 jwt Sequelize
+nginx nodejs memcache mysql
