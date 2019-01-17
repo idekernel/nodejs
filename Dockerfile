@@ -12,11 +12,12 @@ MAINTAINER docker_user docker_user@email.com
 # Commands to update the image
 #RUN echo "deb http://archive.ubuntu.com/ubuntu/ raring main universe" >> /etc/apt/sources.list
 # nginx
-RUN apt-get update && apt-get install -y nginx nodejs
+RUN apt-get update && apt-get install -y nginx nodejs  vim wget mysql-server
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 
 # Commands when creating a new container
 CMD /usr/sbin/nginx
 CMD /usr/sbin/nginx -t
-# port
-EXPOSE 80
+CMD /etc/init.d/mysql start
+# Port
+EXPOSE 8080
