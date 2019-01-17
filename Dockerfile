@@ -17,5 +17,6 @@ RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 
 # Commands when creating a new container
 CMD /usr/sbin/nginx
+CMD /usr/sbin/nginx -t
 # port
 EXPOSE 80
